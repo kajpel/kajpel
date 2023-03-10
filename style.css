@@ -10,3 +10,15 @@ body {
     background-color: #020300;
     color: #DDBDD5;
 }
+
+#menu ul {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#menu ul li {
+    display: inline-block;
+    margin: 0px 50px;
+}
