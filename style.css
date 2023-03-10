@@ -9,16 +9,38 @@ Black: #0020300 */
 body {
     background-color: #020300;
     color: #DDBDD5;
+    font-family: 'Work Sans', sans-serif;
 }
 
-#menu ul {
+.menu ul {
     list-style-type: none;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "menu1 menu2 menu3 menu4";
 }
 
-#menu ul li {
-    display: inline-block;
-    margin: 0px 50px;
+.menu #menu1 {
+    grid-area: menu1;
+}
+
+.menu #menu2 {
+    grid-area: menu2;
+}
+
+.menu #menu3 {
+    grid-area: menu3;
+}
+
+.menu #menu4 {
+    grid-area: menu4;
+}
+
+.header {
+    font-size: 72px;
+    text-align: center;
+    margin-top: 10%;
 }
