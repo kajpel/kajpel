@@ -12,6 +12,11 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .menu ul {
     list-style-type: none;
     font-weight: bold;
