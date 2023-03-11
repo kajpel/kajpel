@@ -147,10 +147,11 @@ p {
     object-fit: contain;
     width: 100%;
     max-height: 400px;
+    min-width: 100%;
 
 }
 
-/* Specific styling for content-area-1 */
+/* Specific styling for content-area-1 ttt */
 #content-area-1 {
     grid-area: content-area-1;
     background-color: #020300;
