@@ -19,6 +19,7 @@ body {
         "content-area content-area content-area content-area content-area content-area";
     column-gap: 5%;
     row-gap: 5%;
+    margin: 0%;
 }
 
 a {
@@ -97,6 +98,9 @@ a {
     grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
     grid-template-rows: auto;
     grid-template-areas: ". text-block text-block image-block image-block  .";
+    background-color: #F29559;
+    padding: 5% 0%;
+    margin: 0%;
 }
 
 .content-area .text-block {
