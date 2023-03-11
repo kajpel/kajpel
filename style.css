@@ -16,7 +16,7 @@ body {
     grid-template-areas:
         ". logo menu menu menu ."
         ". header header header header ."
-        ". text-block text-block image-block image-block .";
+        "content-area content-area content-area content-area content-area content-area";
     column-gap: 5%;
     row-gap: 5%;
 }
@@ -91,14 +91,21 @@ a {
     margin-top: 0%;
 }
 
-.text-block {
+.content-area .text-block {
     grid-area: text-block;
     width: 100%;
     max-height: 100%;
 }
 
+.content-area {
+    display: grid;
+    grid-area: content-area;
+    grid-template-columns: subgrid;
+    grid-template-rows: auto;
+    grid-template-areas: ". text-block text-block image-block image-block  .";
+}
 
-.image-block {
+.content-area .image-block {
     grid-area: image-block;
 }
 
