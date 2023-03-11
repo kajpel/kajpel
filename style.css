@@ -80,6 +80,7 @@ a {
     place-self: center;
     text-align: center;
     margin: 5% 0% 0% 0%;
+    white-space: nowrap;
 }
 
 .header header {
