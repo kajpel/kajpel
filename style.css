@@ -7,17 +7,20 @@ Pink: #DDBDD5
 Black: #0020300 */
 
 body {
-    background-color: #DDBDD5;
+    background-image: url("img/background.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: #D2BB81;
     color: #0020300;
     font-family: 'Josefin Sans', sans-serif;
     display: grid;
-    grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-        "logo . . menu menu ."
-        ". header header header header ."
-        "content-area-1 content-area-1 content-area-1 content-area-1 content-area-1 content-area-1"
-        "content-area-2 content-area-2 content-area-2 content-area-2 content-area-2 content-area-2";
+        ". . ."
+        ". name ."
+        ". menu .";
     column-gap: 5%;
     row-gap: 0%;
     margin: 0%;
@@ -28,137 +31,26 @@ a {
     text-decoration: inherit;
 }
 
-p {
-    font-size: large;
-}
-
-.menu {
-    grid-area: menu;
-    align-items: right;
-}
-
-.menu ul {
+ul {
     list-style-type: none;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: right;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "menu1 menu2 menu3 menu4 menu5";
-    column-gap: 10%;
-    padding-inline-start: 0px;
+    list-style-position: inherit;
+    margin: 0%;
+    padding: 0%;
 }
 
-.logo {
-    background-color: #F29559;
-    color: #FFF;
-    border: 1px solid white;
-    font-size: 180%;
-    grid-area: logo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu #menu1 {
-    grid-area: menu1;
-}
-
-.menu #menu2 {
-    grid-area: menu2;
-}
-
-.menu #menu3 {
-    grid-area: menu3;
-}
-
-.menu #menu4 {
-    grid-area: menu4;
-}
-
-.menu #menu5 {
-    grid-area: menu5;
-}
-
-.header {
-    grid-area: header;
-    place-self: center;
+#name {
+    grid-area: name;
     text-align: center;
-    margin: 5% 0% 5% 0%;
-    white-space: nowrap;
+    font-size: 100px;
+    font-weight: 700;
+    color: #0D16E0;
+    letter-spacing: 0.5rem;
 }
 
-.header header {
-    font-size: 130px;
-    font-weight: bold;
-}
-
-.header h2 {
-    margin-top: 0%;
-    font-weight: 200;
-    letter-spacing: 0.2rem;
-    font-size: xx-large;
-}
-
-/* General styling for content areas */
-.content-area {
-    display: grid;
-    grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
-    grid-template-rows: auto;
-    grid-template-areas: ". text-block text-block image-block image-block  .";
-    column-gap: 5%;
-    padding: 5% 0%;
-    margin: 0%;
-}
-
-
-.content-area .text-block {
-    grid-area: text-block;
-    width: 100%;
-    max-height: 100%;
-}
-
-.content-area .image-block {
-    grid-area: image-block;
-}
-
-.content-area-inverted {
-    display: grid;
-    grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
-    grid-template-rows: auto;
-    grid-template-areas: ". image-block image-block text-block text-block  .";
-    column-gap: 5%;
-    padding: 5% 0%;
-    margin: 0%;
-}
-
-.content-area-inverted .text-block {
-    grid-area: text-block;
-    width: 100%;
-    max-height: 100%;
-}
-
-.content-area-inverted .image-block {
-    grid-area: image-block;
-}
-
-.image-block img {
-    object-fit: contain;
-    width: 100%;
-    max-height: 400px;
-    min-width: 100%;
-
-}
-
-/* Specific styling for content-area-1 ttt */
-#content-area-1 {
-    grid-area: content-area-1;
-    background-color: #020300;
-    color: #FFF;
-}
-
-#content-area-2 {
-    grid-area: content-area-2;
-    background-color: #F29559;
+#menu {
+    grid-area: menu;
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 2;
 }
