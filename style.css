@@ -28,6 +28,10 @@ a {
     text-decoration: inherit;
 }
 
+p {
+    font-size: large;
+}
+
 .menu {
     grid-area: menu;
     align-items: right;
