@@ -7,15 +7,15 @@ Pink: #DDBDD5
 Black: #0020300 */
 
 body {
-    background-color: #020300;
-    color: #DDBDD5;
+    background-color: #DDBDD5;
+    color: #0020300;
     font-family: 'Work Sans', sans-serif;
     display: grid;
     grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
     grid-template-rows: auto;
     grid-template-areas:
-        "logo menu menu menu menu ."
-        ". . header header . ."
+        ". logo menu menu menu ."
+        ". header header header header ."
         ". text-block text-block image-block image-block .";
     column-gap: 5%;
     row-gap: 5%;
@@ -28,13 +28,14 @@ a {
 
 .menu {
     grid-area: menu;
+    align-items: right;
 }
 
 .menu ul {
     list-style-type: none;
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
+    text-align: right;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -77,8 +78,16 @@ a {
 .header {
     grid-area: header;
     place-self: center;
-    font-size: 72px;
     text-align: center;
+    margin: 5% 0% 0% 0%;
+}
+
+.header header {
+    font-size: 130px;
+}
+
+.header h2 {
+    margin-top: 0%;
 }
 
 .text-block {
@@ -90,8 +99,6 @@ a {
 
 .image-block {
     grid-area: image-block;
-
-
 }
 
 .image-block img {
