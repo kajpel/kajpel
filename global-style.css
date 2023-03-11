@@ -14,16 +14,6 @@ body {
     background-color: #D2BB81;
     color: #0020300;
     font-family: 'Josefin Sans', sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        ". . ."
-        ". name ."
-        ". menu .";
-    column-gap: 5%;
-    row-gap: 0%;
-    margin: 0%;
 }
 
 a {
@@ -38,19 +28,6 @@ ul {
     padding: 0%;
 }
 
-#name {
-    grid-area: name;
-    text-align: center;
-    font-size: 100px;
-    font-weight: 700;
-    color: #0D16E0;
-    letter-spacing: 0.5rem;
-}
-
-#menu {
-    grid-area: menu;
-    text-align: center;
-    font-style: italic;
+h3 {
     font-size: 32px;
-    line-height: 2;
 }
