@@ -10,13 +10,15 @@ body {
     background-color: #020300;
     color: #DDBDD5;
     font-family: 'Work Sans', sans-serif;
-
     display: grid;
     grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
     grid-template-rows: auto;
     grid-template-areas:
-        ". menu menu menu menu ."
-        ". . header header . .";
+        "logo menu menu menu menu ."
+        ". . header header . ."
+        ". text-block text-block image-block image-block .";
+    column-gap: 5%;
+    row-gap: 5%;
 }
 
 a {
@@ -41,6 +43,16 @@ a {
     padding-inline-start: 0px;
 }
 
+.logo {
+    background-color: #F29559;
+    color: #FFF;
+    border: 1px solid white;
+    font-size: 180%;
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .menu #menu1 {
     grid-area: menu1;
@@ -64,7 +76,27 @@ a {
 
 .header {
     grid-area: header;
+    place-self: center;
     font-size: 72px;
     text-align: center;
-    margin-top: 10%;
+}
+
+.text-block {
+    grid-area: text-block;
+    width: 100%;
+    max-height: 100%;
+}
+
+
+.image-block {
+    grid-area: image-block;
+
+
+}
+
+.image-block img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 400px;
+
 }
