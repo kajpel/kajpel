@@ -14,11 +14,12 @@ body {
     grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
     grid-template-rows: auto;
     grid-template-areas:
-        ". logo menu menu menu ."
+        "logo . . menu menu ."
         ". header header header header ."
-        "content-area content-area content-area content-area content-area content-area";
+        "content-area-1 content-area-1 content-area-1 content-area-1 content-area-1 content-area-1"
+        "content-area-2 content-area-2 content-area-2 content-area-2 content-area-2 content-area-2";
     column-gap: 5%;
-    row-gap: 5%;
+    row-gap: 0%;
     margin: 0%;
 }
 
@@ -80,29 +81,33 @@ a {
     grid-area: header;
     place-self: center;
     text-align: center;
-    margin: 5% 0% 0% 0%;
+    margin: 5% 0% 5% 0%;
     white-space: nowrap;
 }
 
 .header header {
     font-size: 130px;
+    font-weight: bold;
 }
 
 .header h2 {
     margin-top: 0%;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    font-size: xx-large;
 }
 
+/* General styling for content areas */
 .content-area {
     display: grid;
-    grid-area: content-area;
     grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
     grid-template-rows: auto;
     grid-template-areas: ". text-block text-block image-block image-block  .";
     column-gap: 5%;
-    background-color: #F29559;
     padding: 5% 0%;
     margin: 0%;
 }
+
 
 .content-area .text-block {
     grid-area: text-block;
@@ -114,9 +119,41 @@ a {
     grid-area: image-block;
 }
 
+.content-area-inverted {
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
+    grid-template-rows: auto;
+    grid-template-areas: ". image-block image-block text-block text-block  .";
+    column-gap: 5%;
+    padding: 5% 0%;
+    margin: 0%;
+}
+
+.content-area-inverted .text-block {
+    grid-area: text-block;
+    width: 100%;
+    max-height: 100%;
+}
+
+.content-area-inverted .image-block {
+    grid-area: image-block;
+}
+
 .image-block img {
     object-fit: contain;
     width: 100%;
     max-height: 400px;
 
+}
+
+/* Specific styling for content-area-1 */
+#content-area-1 {
+    grid-area: content-area-1;
+    background-color: #020300;
+    color: #FFF;
+}
+
+#content-area-2 {
+    grid-area: content-area-2;
+    background-color: #F29559;
 }
